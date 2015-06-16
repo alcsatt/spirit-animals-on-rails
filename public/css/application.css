@@ -1,0 +1,52 @@
+nav {
+  border-radius: 0;
+}
+.row {
+  text-align: center;
+}
+.well {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+.well h1 {
+  font-weight: 300;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+.col-md-4 {
+  display: block;
+  text-align: center;
+  padding: 1em;
+}
+.score-holder .score-counter {
+  width: 50%;
+}
+button.btn.btn-primary, a {
+  font-weight: 300;
+}
+.btn.btn-success {
+  width: 5em;
+}
+.navbar-nav {
+  display: flex;
+}
+h2.deck-title {
+  font-weight: 300;
+}
+nav .btn {
+  margin-top: 1em;
+}
+.form-control {
+  width: 70%;
+  margin: auto;
+}
+.table * {
+  text-align: left;
+}
+.table tr.guesses {
+  height: 5em;
+}
+.button-wrapper .btn.btn-lg {
+  width: 10em;
+}

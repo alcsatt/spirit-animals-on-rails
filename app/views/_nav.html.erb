@@ -1,0 +1,22 @@
+<nav class="navbar navbar-default navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">SpiritAnimals</a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/">Home</a></li>
+        <li><a href="#">My Spirit Animal</a></li>
+        <li><a href="#">My Games</a></li>
+          <% if current_user %>
+            <%= form_tag logout_path, method: 'delete' do |f| %>
+            <%= submit_tag 'Signout' %>
+            <%end%>
+        <% else %>
+        <li><a href="/login">Sign in</a></li>
+        <li><%= link_to 'Sign Up', new_user_path %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,6 @@
+<div class="col-md-3">
+  <%= form_for @game, url: "/game/#{@game.id}", method: 'put' do |f| %>
+    <%= hidden_field_tag 'selection', "#{card}" %>
+    <%= f.submit "#{@letters[idx]}", class: "btn btn-lg btn-#{@btn_types[idx]}" %>
+  <% end %>
+</div>

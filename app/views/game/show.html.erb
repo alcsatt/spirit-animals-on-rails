@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="well">
+    <h2 style="font-weight: 200;">You are playing the following deck: <b> <%= @game.deck.name %></b></h2>
+    <div class="score-holder" style="display: flex;">
+      <p class="score-counter">Correct answers: <%= @game.right %></p>
+      <p class="score-counter">Incorrect answers: <%= @game.wrong %></p>
+    </div>
+  </div>
+  <hr />
+  <div class="row">
+    <div class="col-md-3">
+      <% if @messages %>
+        <% @messages.each do |message| %>
+        <p> <%= message %></p>
+        <% end %>
+      <% end %>
+      <h1><%= current_card.name %></h1>
+      <img src="<%= current_card.image_url %>" height="250" />
+    </div>
+    <div class="col-md-9">
+      <h3>This spirit animal has the following attribute: </h3>
+      <table class="table table-striped table-bordered">
+        <thead>
+          <tr>Choose one of the following:</tr>
+        </thead>
+        <tbody>
+          <% @cards.each_with_index do |card, idx| %>
+            <tr class="guesses">
+              <th><%= @letters[idx] %>.</th>
+              <th><%= card %></th>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+    <div class="button-wrapper">
+      <% @cards.each_with_index do |card, idx| %>
+        <%= render partial: "/guess_btn", locals: {card: card, idx: idx} %>
+      <% end %>
+    </div>
+  </div>
+</div>

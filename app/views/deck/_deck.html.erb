@@ -1,0 +1,8 @@
+<div class="col-md-4" style="display: block;">
+  <%= form_for deck, url: game_index_path, method: 'post' do |f| %>
+    <%= hidden_field_tag 'deck_id', "#{deck.id}" %>
+    <%= f.submit "#{deck.name}", class: "btn btn-success btn-lg" %>
+  <% end %>
+  <br/><hr/>
+  <img src="<%= deck.cards.first.image_url %>" height="300"/>
+</div>
